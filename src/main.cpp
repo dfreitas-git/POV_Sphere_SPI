@@ -49,13 +49,13 @@ float targetRPM = 420.0;
 float Kp = 0.4f;
 float Ki = 0.8f;
 float Kd = 0.02f;
-float Kff = 0.05f; // small feedforward (adjustable)
+float Kff = 0.55f; // small feedforward (adjustable)
 
 // Runtime state
 float pidIntegral = 0.0f;
 float lastError = 0.0f;
 float lastDerivative = 0.0f; // filtered derivative
-uint32_t lastPidMs = 0;
+uint32_t lastPidMs = 0;  // Last time PID was updated
 
 // Output limits (map to your PWM range)
 const float PWM_MIN = 200.0f;
